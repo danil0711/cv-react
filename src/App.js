@@ -1,6 +1,6 @@
 import "./styles/main.css";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Redirect } from "react-router-dom";
 
 import Header from "./Components/Header/Header";
 import Navbar from "./Components/navbar/Navbar";
@@ -22,6 +22,8 @@ function App() {
         <Navbar />
 
         <Routes>
+          
+          <Route path="/cv-react" element={<Home/>}/>
           <Route path="/" element={<Home/>}/>
           <Route path="/projects" element={<Projects/>}/>
           <Route path="/project/:id" element={<Project/>}/>
